@@ -43,8 +43,10 @@ public class Box : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || withCollistion)
+        if (Input.GetKeyDown(KeyCode.Space) && withCollistion)
         {
+            uiPanel.SetActive(false);
+            uiPanel.SetActive(false);
             winPanel.SetActive(true);
             StartCoroutine(HideWinPanel());
         }

@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
         if(!_mainThemeStarted)
         {
             Debug.Log("playing main theme");
-            Play("MainTheme");
+            Play("MenuTheme");
             _mainThemeStarted = true;
         }
 
@@ -57,5 +57,11 @@ public class AudioManager : MonoBehaviour
     {
         var sound = Array.Find(Sounds, s => s.Name == name);
         sound.Source.Play();
+    }
+
+    public void Stop(string name)
+    {
+        var sound = Array.Find(Sounds, s => s.Name == name);
+        sound.Source.Stop();
     }
 }

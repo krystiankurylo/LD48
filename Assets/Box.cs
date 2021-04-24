@@ -60,6 +60,8 @@ public class Box : MonoBehaviour
 
             winPanel.SetActive(false);
             winPanelHidden = true;
+            AudioManager.Instance.Stop("MainTheme");
+            AudioManager.Instance.Play("MenuTheme");
             SceneManager.LoadScene("Menu");
         }
     }

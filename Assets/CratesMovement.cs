@@ -19,17 +19,30 @@ public class CratesMovement : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.A) && rotatable)
+		if (Input.GetKey(KeyCode.A) && rotatable)
 		{
 			rotatable = false;
 			RotateLeft();
 		}
-
-		if (Input.GetKeyDown(KeyCode.D) && rotatable)
+		
+		if (Input.GetKey(KeyCode.D) && rotatable)
 		{
 			rotatable = false;
 			RotateRight();
 		}
+		
+		
+		// if (Input.GetKeyDown(KeyCode.A) && rotatable)
+		// {
+		// 	rotatable = false;
+		// 	RotateLeft();
+		// }
+		//
+		// if (Input.GetKeyDown(KeyCode.D) && rotatable)
+		// {
+		// 	rotatable = false;
+		// 	RotateRight();
+		// }
 	}
 
 	private void RotateLeft()
@@ -37,7 +50,7 @@ public class CratesMovement : MonoBehaviour
 		transform.RotateAround(
 			target.transform.position,
 			Vector3.forward,
-			45);
+			2);
 		rotatable = true;
 	}
 
@@ -46,7 +59,7 @@ public class CratesMovement : MonoBehaviour
 		transform.RotateAround(
 			target.transform.position,
 			Vector3.forward,
-			-45);
+			-2);
 		rotatable = true;
 	}
 

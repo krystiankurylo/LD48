@@ -39545,7 +39545,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "use   a   and   d   \x03\x03\x03\nto move"
+  m_Text: "use   a   and   d   \x03\x03\x03\nto rotate"
 --- !u!222 &1192330555
 CanvasRenderer:
   m_ObjectHideFlags: 0
